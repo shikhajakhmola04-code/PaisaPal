@@ -2,34 +2,38 @@
 
 **Task:** T3  
 **Agent name:** PaisaPal  
-**Team name:** Add your team name here
+**Team name:** Individual
 
 PaisaPal is a terminal-based AI agent that records income and expenses, reads real records from SQLite, summarizes monthly spending, manages budgets, and warns when a budget reaches 80% or goes over 100%.
 
 ## Requirements
 - Node.js 18+
-- OpenAI API key
+- Groq API key
+
 
 ## Setup
-1. Extract this project folder.
-2. Open a terminal in this folder.
-3. Install dependencies:
-   ```bash
+
+Requirements:
+- Node.js 18+
+- Groq API key
+
+1. Install dependencies:
+
    npm install
-   ```
-4. Copy `.env.example` to `.env` and add your API key:
-   ```env
-   OPENAI_API_KEY=your_real_key
-   OPENAI_MODEL=gpt-4o-mini
-   ```
-5. Create and seed the database:
-   ```bash
+
+2. Copy `.env.example` to `.env` and add your Groq API key:
+
+   GROQ_API_KEY=your_real_key
+   GROQ_MODEL=openai/gpt-oss-120b
+
+3. Create and seed the database:
+
    npm run seed
-   ```
-6. Start PaisaPal:
-   ```bash
+
+4. Start PaisaPal:
+
    npm start
-   ```
+
 
 ## Users
 - `user_id=1`: Riya
@@ -57,4 +61,4 @@ users (1) -------- (many) transactions (many) -------- (1) categories
 Tables: `users`, `categories`, `transactions`, `budgets`. The schema is in `schema.sql`; sample data is inserted by `seed.js`.
 
 ## Test
-See `test_prompts.md`. API use requires internet and a valid OpenAI API key.
+See `test_prompts.md`. API use requires internet and a valid Groq API key.
