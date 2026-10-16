@@ -1,0 +1,15 @@
+{
+  "name": "paisapal-expense-agent",
+  "version": "1.0.0",
+  "description": "PaisaPal AI expense and budget coach using Node.js, OpenAI tools, and SQLite",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "dotenv": "^16.4.7",
+    "openai": "^4.85.4"
+  }
+}
